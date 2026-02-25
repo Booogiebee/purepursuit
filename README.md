@@ -4,7 +4,7 @@
 ## Motion Planning
 The motion planning for a robot using the pure pursuit controller involves defining a path that the robot will follow. This path is typically represented as a series of waypoints or line segments. The robot uses these waypoints to determine its trajectory and adjust its steering accordingly. The key aspect of motion planning is to ensure that the path is feasible and allows the robot to navigate effectively through its environment.
 
-![waypoints Image](Images\waypoints.png)
+![waypoints Image](Images/waypoints.png)
 
 ## Radius of Curvature
 The radius of curvature is a critical parameter in the pure pursuit controller. It determines how sharply the robot can turn while following a path. The radius is calculated based on the look-ahead distance and the turn error. A smaller radius indicates a sharper turn, while a larger radius indicates a gentler turn. The formula for the radius of curvature \( R \) is given by:
@@ -32,8 +32,8 @@ $$
 K = \frac{variance_{expected}}{variance_{expected} + variance_{measurement}}
 $$
 
-![kalmangain1 Image](Images\kalmaingain1.jpeg)
-![kalmangain Image](Images\KalmanGain.jpeg)
+![kalmangain1 Image](Images/kalmaingain1.jpeg)
+![kalmangain Image](Images/KalmanGain.jpeg)
 
 This gain determines how much weight is given to the predicted state versus the measured state. A higher Kalman Gain indicates more trust in the measurement, while a lower gain indicates more trust in the prediction.
 
@@ -53,7 +53,7 @@ The look-ahead distance \( L \) is another crucial parameter that affects the pe
 - **Smaller L**: Leads to more aggressive maneuvering as the robot follows a closer arc. This can help the robot make sharper turns but may work against the dynamic limits of the vehicle, potentially causing instability.
 - **Larger L**: Results in a smoother trajectory but can introduce higher tracking errors. This may lead to close approaches to obstacles, as the robot may not adjust its path quickly enough to avoid them.
 
-![tunePID Image](Images\tunePID.png)
+![tunePID Image](Images/tunePID.png)
 
 The concept of tuning the look-ahead distance was discovered by Craig Coulter in 1992 for use in autonomous vehicles and robots. It emphasizes the balance between responsiveness and stability in navigating paths.
 
@@ -65,9 +65,9 @@ Before implementing the pure pursuit controller, ensure you have the following k
 - **Basic programming knowledge** in arrays and loops to implement the control algorithms.
 - **High school level math** such as trigonometry to understand the geometric calculations involved.
 
-![BasicpurepursuitImage](Images\Basicpurepursuit.jpeg)
+![BasicpurepursuitImage](Images/Basicpurepursuit.jpeg)
 
-![structure](Images\Structure-of-the-Pure-Pursuit-path-tracking-algorithm_Q320.jpg)
+![structure](Images/Structure-of-the-Pure-Pursuit-path-tracking-algorithm_Q320.jpg)
 
 ## Important Notes
 If you have any comments or suggestions, encountered issues with the code, or have questions about this document, reach out to us on our GitHub Support Page
